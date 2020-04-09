@@ -1,4 +1,4 @@
-var config = {
+/*var config = {
     apiKey: "AIzaSyBu1BbdxJ987wRAh4F55B_ydNLE93zkrzs",
     authDomain: "minipj-2d24e.firebaseapp.com",
     databaseURL: "https://minipj-2d24e.firebaseio.com",

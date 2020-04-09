@@ -1,22 +1,32 @@
 import React from 'react';
-import './App.css'
+import './App.css';
+import ProductList from './CRUD-FORM/ProductList'
+import InputForm from './CRUD-FORM/InputForm'
 import axios from 'axios'
-import NavBar from './components/NavBar'
+import {useDispatch } from 'react-redux';
+import NavBar from './Components/NavBar'
+//import DemoCarousel from './Components/Slidebar'
+
+
 
 function App() {
   const dispatch = useDispatch();
   
-  const getStudents = async () => {
-    const result = await axios.get(`http://localhost/api/home`)
-    const action = {type:'GET_STUDENTS',student: result.data}
+  const getProducts = async () => {
+    const result = await axios.get(`http://localhost/api/products`)
+    const action = {type:'GET_PRODUCTS',products: result.data}
     dispatch(action)
   }
 
   return (
     <div>
 
-      <h2>Redux student</h2>
-      <StudentList/>
+      
+      
+      <NavBar/>
+      <h2>Redux products</h2>
+     
+      <ProductList/>
       <InputForm/>
       
     </div>

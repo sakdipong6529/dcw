@@ -12,7 +12,7 @@ app.use('/api', bodyParser.urlencoded({ extended: false }), router);
 let products = [  { 'no': 1, 'id': "5635512000", 'name': "Alizz" ,'surname':"Qii" ,'Major':"CoE", 'GPA':3.32},
                   { 'no': 2, 'id': "5635512036", 'name': "Sakdipong",'surname':"Jaema"  ,'Major':"CoE",'GPA':2.50}
                ];
-router.route('/home')
+router.route('/products')
     // get all products
     .get((req, res) => res.json(products))
     // insert a new product
@@ -33,7 +33,7 @@ router.route('/products/:product_no')
         let index = products.findIndex(product => (product.no === +no))
         res.json(products[index])                   // get a product
     })
-    .put((req, res) => {                               // Update a bear
+    .put((req, res) => {                               // Update a product
         let no = req.params.product_no
         let index = products.findIndex(product => (product.no === +no))
         products[index].name = req.body.name;
