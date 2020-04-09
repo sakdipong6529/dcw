@@ -5,6 +5,7 @@ import InputForm from './CRUD-FORM/InputForm'
 import axios from 'axios'
 import {useDispatch } from 'react-redux';
 import NavBar from './Components/NavBar'
+import Footer from './Components/Footer'
 //import DemoCarousel from './Components/Slidebar'
 
 
@@ -28,6 +29,7 @@ function App() {
      
       <ProductList/>
       <InputForm/>
+      <Footer key="2" />
       
     </div>
   );
