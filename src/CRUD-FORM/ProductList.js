@@ -1,8 +1,8 @@
 import React, { useEffect }  from 'react';
 import ProductCard from './ProductCard'
-//import './StudentList.css';
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios'
+import './ProductList.css'
 
 const ProductList = ()=>{
     const products = useSelector(state => state.product);
@@ -24,9 +24,10 @@ const ProductList = ()=>{
         <div >
             {
                 products.map((product, index) => (
-                    <ul key={index} style={{ margin: 5 }}>
-                        <ProductCard  {...product}  />
-                    </ul>
+                    <td key={index} >
+
+                        < ProductCard  {...product}  />
+                    </td>
                 ))
             }
         </div>

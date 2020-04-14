@@ -1,7 +1,12 @@
 import React, { useEffect }  from 'react';
-//import './StudentList.css';
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux';
+import './ProductCard.css'
+import Card from 'react-bootstrap/Card'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
 
 const ProductCard = (props)=>{
     const dispatch = useDispatch();
@@ -37,12 +42,20 @@ const ProductCard = (props)=>{
        
     
     return(
-        <div >
-          <li>{props.name} {props.surname} :{props.id} : {props.Major} GPA {props.GPA}
-          <button onClick={deleteProduct}>Delete</button>
-          <button onClick={updateProduct}>Update</button>
-
-          </li>
+      
+    <div className='main'>
+ 
+      <Card style={{ width: '12rem' ,margin:20,}}>
+      <Card.Img variant="top" src={props.src} />
+      <Card.Body>
+      <Card.Title>{props.name}</Card.Title>
+      <Card.Text>
+        {props.no}
+      </Card.Text>
+      <button variant="primary">BUY</button>
+      <button onClick={deleteProduct}>Del</button>
+      </Card.Body>
+      </Card>
     </div>
     )
 

@@ -22,7 +22,7 @@ const InputForm = props => {
     return (
         <div>
             <h2>Add Product</h2>
-           {form.name} {form.surname} {form.id} {form.Major} {form.GPA} 
+           {form.name} {form.surname} {form.id} {form.Major} {form.src} 
             <table>
                 <tbody>
                     <tr>
@@ -64,11 +64,11 @@ const InputForm = props => {
                         </td>
                     </tr>
                     <tr>
-                        <td>GPA</td>
+                        <td>src</td>
                         <td>
                         <input 
-                                type="number"
-                                onChange={(e) => dispatch({ type: 'CHANGE_GPA', GPA: e.target.value })}
+                                type="text"
+                                onChange={(e) => dispatch({ type: 'CHANGE_SRC', src: e.target.value })}
                         />   
                         </td>
                     </tr>

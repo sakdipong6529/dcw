@@ -6,7 +6,12 @@ import axios from 'axios'
 import {useDispatch } from 'react-redux';
 import NavBar from './Components/NavBar'
 import Footer from './Components/Footer'
+import Carousel from "./Components/Slide";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Input } from 'reactstrap';
 //import DemoCarousel from './Components/Slidebar'
+import LoginForm from './Components/LoginForm'
+
 
 
 
@@ -20,16 +25,15 @@ function App() {
   }
 
   return (
-    <div className='bg'>
-
-      
-      
-      <NavBar/>
-      <h2>Redux products</h2>
-     
-      <ProductList/>
-      <InputForm/>
-      <Footer key="2" />
+    <div className='bg'>   
+    <NavBar/>
+    <h2>Redux products</h2>
+    
+    <Carousel/>   
+    <ProductList/>
+    <LoginForm />
+    
+    <Footer/>
       
     </div>
   );

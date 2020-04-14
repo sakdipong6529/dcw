@@ -1,7 +1,14 @@
 .bg {
-  background-color: gray;
+    background-color: gray;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
-
+.td{
+  padding: 5px 15px 5px 15px; 
+  margin: 20px 15px 15px 20px;
+}
 .App {
   text-align: center;
 }
@@ -9,6 +16,12 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.ps{
+  margin-left: 500px;
+  margin-right: 500px;
+  
 }
 
 @media (prefers-reduced-motion: no-preference) {

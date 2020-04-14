@@ -5,7 +5,7 @@ const initialForm = {
     surname: '',
     id: '',
     Major: '',
-    GPA: ' '
+    src: ' '
 }
 const formReducer = (state=initialForm,action)=>{
     switch(action.type){
@@ -14,7 +14,7 @@ const formReducer = (state=initialForm,action)=>{
         case 'CHANGE_SURNAME': return {...state,surname: action.surname}
         case 'CHANGE_ID': return {...state,id: action.id}
         case 'CHANGE_MAJOR': return {...state,Major: action.Major}
-        case 'CHANGE_GPA': return {...state,GPA: action.GPA}
+        case 'CHANGE_SRC': return {...state,src: action.src}
         default:return state;
     }
 }

@@ -1,33 +1,17 @@
+.intro-2 {
+  background: url("https://mdbootstrap.com/img/Photos/Others/img (51).jpg")no-repeat center center;
+  background-size: cover;
+}
+.view {
+  margin-top: -56px;
+
+}
 .navbar {
-  width: 100%;
-  background-color: #555;
-  overflow: auto;
+  z-index: 1;
 }
-
-/* Navbar links */
-.navbar a {
-  float: left;
-  text-align: center;
-  padding: 12px;
-  color: white;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Navbar links on mouse-over */
-.navbar a:hover {
-  background-color: #000;
-}
-
-/* Current/active navbar link */
-.active {
-  background-color: #4CAF50;
-}
-
-/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
-  }
+html,
+body,
+header,
+.view {
+  height: 100%;
 }

@@ -9,8 +9,8 @@ app.use(cors());
 app.use('/api', bodyParser.json(), router);   //[use json]
 app.use('/api', bodyParser.urlencoded({ extended: false }), router);
 
-let products = [  { 'no': 1, 'id': "5635512000", 'name': "Alizz" ,'surname':"Qii" ,'Major':"CoE", 'GPA':3.32},
-                  { 'no': 2, 'id': "5635512036", 'name': "Sakdipong",'surname':"Jaema"  ,'Major':"CoE",'GPA':2.50}
+let products = [  { 'no': 1, 'id': "5635512000", 'name': "Alizz" ,'surname':"Qii" ,'Major':"CoE", 'src':'https://www.kito.co.th/app/uploads/2019/07/Kito-Dance-AH21-Sandals-Red_.jpg'},
+                  { 'no': 2, 'id': "5635512036", 'name': "Sakdipong",'surname':"Jaema"  ,'Major':"CoE",'src':'https://assets.adidas.com/images/w_600,f_auto,q_auto:sensitive,fl_lossy/dc833a76e03e4c70bbb3a9cf013871ea_9366/Coast_Star__EE8900_01_standard.jpg'}
                ];
 router.route('/products')
     // get all products
@@ -23,7 +23,7 @@ router.route('/products')
     product.surname = req.body.surname
     product.id = req.body.id
     product.Major = req.body.Major
-    product.GPA = req.body.GPA
+    product.src = req.body.src
     products.push(product);
     res.json({ message: 'products created!' })
     })
@@ -40,7 +40,7 @@ router.route('/products/:product_no')
         products[index].surname = req.body.surname;
         products[index].id = req.body.id;
         products[index].Major = req.body.Major;
-        products[index].GPA = req.body.GPA;
+        products[index].src = req.body.src;
         res.json({ message: 'product updated!' + req.params.product_no });
     })
     .delete((req, res) => {                   // Delete a bear

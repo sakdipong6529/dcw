@@ -1,16 +1,22 @@
 import React from 'react';
-import './NavBar.css'
+//import './NavBar.css'
+import { Nav, Navbar, NavItem } from "react-bootstrap"
+
+
 
 const NavBar = () => {
     return (
-        <div>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
-            <div class="navbar">
-                <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
-                <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
-                <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-                <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
-            </div>
+    <div>
+        
+        <Navbar bg="dark" variant="dark">
+        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+        <Nav className="mr-auto">
+          <Nav.Link href="#home">Home</Nav.Link>
+          <Nav.Link href="#features">Features</Nav.Link>
+          <Nav.Link href="#pricing">PPP</Nav.Link>
+        </Nav>
+        
+      </Navbar>
     </div>
   );
 }
