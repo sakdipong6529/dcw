@@ -2,18 +2,14 @@ import {createStore, combineReducers} from 'redux'
 const initialForm = {
     no: '' ,
     name: '',
-    surname: '',
-    id: '',
-    Major: '',
+    price: '',
     src: ' '
 }
 const formReducer = (state=initialForm,action)=>{
     switch(action.type){
         case 'CHANGE_NO': return {...state,no: action.no}
         case 'CHANGE_NAME': return {...state,name: action.name}
-        case 'CHANGE_SURNAME': return {...state,surname: action.surname}
-        case 'CHANGE_ID': return {...state,id: action.id}
-        case 'CHANGE_MAJOR': return {...state,Major: action.Major}
+        case 'CHANGE_PRICE': return {...state,price: action.price}
         case 'CHANGE_SRC': return {...state,src: action.src}
         default:return state;
     }

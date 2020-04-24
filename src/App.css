@@ -1,10 +1,16 @@
 .bg {
-    background-color: gray;
+    background-color: darkgray;
     position: relative;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    text-align: center;
+    color: darkmagenta;
+    
 }
+
+
+
 .td{
   padding: 5px 15px 5px 15px; 
   margin: 20px 15px 15px 20px;

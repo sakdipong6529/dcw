@@ -52,8 +52,8 @@ const ProductCard = (props)=>{
       <Card.Text>
         {props.price} B.
       </Card.Text>
-      <button variant="primary">BUY</button>
-      
+      <button onClick={updateProduct}>Update</button>
+      <button onClick={deleteProduct}>Delete</button>
       </Card.Body>
       </Card>
     </div>

@@ -1,6 +1,8 @@
 import React from 'react'
 import auth from '../firebase'
 import InputForm from '../CRUD-FORM/InputForm'
+import ProductList from '../CRUD-FORM/ProductList'
+import ProductList_Admin from '../CRUD-FORM/ProductList_Admin'
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -65,15 +67,19 @@ class LoginForm extends React.Component {
     if (currentUser) {
       return (
         <div>
+          <p><ProductList_Admin/></p>
           <p><InputForm/></p>
           <button onClick={this.logout}>Logout</button>
           
         </div>
       )
     }
-
-    return (
-      <section className="section container">
+    if (currentUser==null) {
+      return (
+        <div>
+          <p><ProductList/></p>
+          
+          <section className="section container">
         <div className="columns is-centered">
           <div className="column is-one-fifth">
             <form onSubmit={this.onSubmit}>
@@ -88,6 +94,7 @@ class LoginForm extends React.Component {
                   />
                 </div>
               </div>
+              
 
               <div className="field">
                 <label className="label">Password</label>
@@ -109,14 +116,16 @@ class LoginForm extends React.Component {
                 </div>
                 <div className="control">
                   
-                </div>
+                </div><br/>
               </div>
             </form>
           </div>
         </div>
       </section>
-    )
-  }
+      </div>
+      )
+    }
+}
 }
 
 export default LoginForm

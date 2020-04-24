@@ -1,5 +1,5 @@
 import React from 'react';
-//import './InputForm.css';
+import './InputForm.css';
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -21,12 +21,12 @@ const InputForm = props => {
     
     return (
         <div>
-            <h2>Add Product</h2>
-           {form.name} {form.surname} {form.id} {form.Major} {form.src} 
-            <table>
+            <h2 className='tt'>↓ Add Product ↓</h2>
+         
+            <table className='all'>
                 <tbody>
                     <tr>
-                        <td>Name</td>
+                        <td>Name :</td>
                         <td>
                             <input 
                                 type="text"
@@ -37,34 +37,17 @@ const InputForm = props => {
                         </td>
                     </tr>
                     <tr>
-                        <td>Surname</td>
+                        <td>Price :</td>
                         <td>
                         <input 
-                                type="text"
-                                onChange={(e) => dispatch({ type: 'CHANGE_SURNAME', surname: e.target.value })}
+                                type="number"
+                                onChange={(e) => dispatch({ type: 'CHANGE_PRICE', price: e.target.value })}
                         />  
                         </td>
                     </tr>
+                    
                     <tr>
-                        <td>ID</td>
-                        <td>
-                        <input 
-                                type="text"
-                                onChange={(e) => dispatch({ type: 'CHANGE_ID', id: e.target.value })}
-                        />   
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Major</td>
-                        <td>
-                        <input 
-                                type="text"
-                                onChange={(e) => dispatch({ type: 'CHANGE_MAJOR', Major: e.target.value })}
-                        />   
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>src</td>
+                        <td>Picture :</td>
                         <td>
                         <input 
                                 type="text"
