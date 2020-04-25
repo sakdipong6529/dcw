@@ -39,13 +39,13 @@ const ProductCard = (props)=>{
       
       <div className='main'>
  
-        <Card style={{ width: '12rem' ,margin:20,}}>
+        <Card style={{ width: '13rem' ,margin:20,}}>
         <Card.Img variant="top" src={props.src} />
         <Card.Body>
         <Card.Title>{props.name}</Card.Title>
         <Card.Text>{props.price} B. </Card.Text>
-        <button onClick={updateProduct}>Update</button>
-        <button onClick={deleteProduct}>Delete</button>
+        <button class="button button1" onClick={updateProduct}>Update</button>
+        <button class="button button3" onClick={deleteProduct}>Delete</button>
         </Card.Body>
         </Card>
 
