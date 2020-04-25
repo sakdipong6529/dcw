@@ -8,6 +8,7 @@ import Carousel from "./Components/Slide";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 //import DemoCarousel from './Components/Slidebar'
 import LoginForm from './Components/LoginForm'
+import ProductCard from './CRUD-FORM/ProductCard'
 
 
 
@@ -24,7 +25,7 @@ function App() {
   return (
     <div className='bg'>   
     <NavBar/>
-    <h1 >Mini-Project SHOP</h1>
+    <h1 className='ft'>Mini-Project SHOP</h1>
     
     <Carousel/>   
     

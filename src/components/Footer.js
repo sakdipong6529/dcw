@@ -1,10 +1,9 @@
 import React from "react";
-import { render } from "react-dom";
 import "./Footer.css";
 
 const Footer = () => (
   <footer className="footer">
-    <p>Some footer nonsense!</p>
+    <p>Last update "4/25/2020" By Sakdipong Jaema</p>
   </footer>
 );
 

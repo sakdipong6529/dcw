@@ -2,7 +2,7 @@ import React, { useEffect }  from 'react';
 import ProductCard from './ProductCard'
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios'
-import './ProductList.css'
+
 
 const ProductList = ()=>{
     const products = useSelector(state => state.product);

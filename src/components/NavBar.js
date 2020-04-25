@@ -1,13 +1,9 @@
 import React from 'react';
-//import './NavBar.css'
 import { Nav, Navbar, NavItem } from "react-bootstrap"
-
-
 
 const NavBar = () => {
     return (
-    <div>
-        
+    <div>       
         <Navbar bg="dark" variant="dark">
         <Navbar.Brand href="#home">MiniProject</Navbar.Brand>
         <Nav className="mr-auto">
@@ -15,12 +11,9 @@ const NavBar = () => {
           <Nav.Link href="https://www.facebook.com/sakdipong.jay" target='_blank'>Facebook</Nav.Link>
           <Nav.Link href="https://github.com/sakdipong6529/dcw" target='_blank'>Github</Nav.Link>
           <Nav.Link href="" target='_blank'>Medium</Nav.Link>
-        </Nav>
-        
+        </Nav>       
       </Navbar>
     </div>
   );
 }
-
-
 export default NavBar;

@@ -1,31 +1,28 @@
-.main {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    color: black;
-   }
-
-.f1 {
-    font-size: x-small;
+.fo {
+    color: linen;
+    font-size: 1.3cm;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
 }
+
 .button {
     background-color: #4CAF50; /* Green */
     border: none;
     color: white;
-    padding: 7px 18px;
+    padding: 7px 14px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 12px;
+    margin: 8px 4px;
     transition-duration: 0.4s;
     cursor: pointer;
   }
+
 .button1:hover {
     background-color: lightgreen; 
     color: black; 
+  
     border-radius: 8px;
 }
   
@@ -34,25 +31,25 @@
     color: white;
     border-radius: 8px;
 }
-.button3:hover {
+  .button3:hover {
     background-color: lightsalmon;
     color: black; 
     border-radius: 8px;
   }
-
   
-.button3 {
+  .button3 {
     background-color: #f44336;
     color: white;
     border-radius: 8px;
   }
-.button5 {
+  .button5 {
     background-color: white;
     color: black;
+    border: 2px solid #555555;
     border-radius: 8px;
   }
   
-.button5:hover {
+  .button5:hover {
     background-color: #555555;
     color: white;
     border-radius: 8px;

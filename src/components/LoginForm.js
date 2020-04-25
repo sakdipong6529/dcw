@@ -3,6 +3,7 @@ import auth from '../firebase'
 import InputForm from '../CRUD-FORM/InputForm'
 import ProductList from '../CRUD-FORM/ProductList'
 import ProductList_Admin from '../CRUD-FORM/ProductList_Admin'
+import './LoginForm.css'
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -69,7 +70,8 @@ class LoginForm extends React.Component {
         <div>
           <p><ProductList_Admin/></p>
           <p><InputForm/></p>
-          <button onClick={this.logout}>Logout</button>
+          Hi ! : {currentUser.email}<br/>
+          <button class="button button3" onClick={this.logout}>Logout</button><br/><br/>
           
         </div>
       )
@@ -77,55 +79,30 @@ class LoginForm extends React.Component {
     if (currentUser==null) {
       return (
         <div>
-          <p><ProductList/></p>
-          
-          <section className="section container">
-        <div className="columns is-centered">
-          <div className="column is-one-fifth">
-            <form onSubmit={this.onSubmit}>
-              <div className="field">
-                <label className="label">Email</label>
-                <div className="control">
+          <p><ProductList/></p>      
+          <h1 className='fo'>___________ADMIN___________</h1>
+            <form onSubmit={this.onSubmit}>             
+                <label className="label">Email :</label>             
                   <input
                     className="input"
                     type="email"
                     name="email"
                     onChange={this.onChange}
                   />
-                </div>
-              </div>
-              
-
-              <div className="field">
-                <label className="label">Password</label>
-                <div className="control">
+                <span> </span>
+                <label className="label">Password :</label>           
                   <input
                     className="input"
                     type="password"
                     name="password"
                     onChange={this.onChange}
-                  />
-                </div>
-              </div><br/>
-
-              {message ? <p className="help is-danger">{message}</p> : null}
-
-              <div className="columns is-centered">
-                <div className="control">
-                  <button className="button is-link">Login</button>
-                </div>
-                <div className="control">
-                  
-                </div><br/>
-              </div>
+                  />                    
+                {message ? <p className="help is-danger">{message}</p> : null}
+                <br/><button class="button button1">Login</button>             
             </form>
-          </div>
-        </div>
-      </section>
-      </div>
+          </div>    
       )
     }
+  }
 }
-}
-
-export default LoginForm
+export default LoginForm;

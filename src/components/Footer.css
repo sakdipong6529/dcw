@@ -1,7 +1,8 @@
 .footer {
     flex-shrink: 0;
     text-align: center;
-    background-color: tomato;
+    background-color: dodgerblue;
     color: white;
+    font-size: 15px;
   }
   
