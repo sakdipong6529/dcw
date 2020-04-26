@@ -9,7 +9,7 @@ const InputForm = props => {
     const products = useSelector(state => state.product)
 
     const addProduct = async () => {
-        await axios.post(`http://localhost/api/products`, form)
+        await axios.post(`https://bof-dcw.herokuapp.com/api/products`, form)
         dispatch({
             type: 'ADD_PRODUCT', product: {
                 no: products.length > 0 ? products[products.length-1].no+1 : 0,

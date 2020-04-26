@@ -1,5 +1,5 @@
 import React from 'react'
-import auth from '../firebase'
+import auth from '../firebaseLogin'
 import InputForm from '../CRUD-FORM/InputForm'
 import ProductList from '../CRUD-FORM/ProductList'
 import ProductList_Admin from '../CRUD-FORM/ProductList_Admin'

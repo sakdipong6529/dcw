@@ -8,7 +8,7 @@ const ProductList = ()=>{
     const products = useSelector(state => state.product);
     const dispatch = useDispatch();
     const getProducts = async () => {
-        const result = await axios.get(`http://localhost/api/products`)
+        const result = await axios.get(`https://bof-dcw.herokuapp.com/api/products`)
        
         const action = {type:'GET_PRODUCTS',product: result.data}
         dispatch(action)

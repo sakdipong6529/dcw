@@ -12,7 +12,7 @@ const ProductCard = (props)=>{
     const [prz,setPrz] = useState(0)
 
     const getProducts = async () => {
-        const result = await axios.get(`http://localhost/api/products`)
+        const result = await axios.get(`https://bof-dcw.herokuapp.com/api/products`)
        
         const action = {type:'GET_PRODUCTS',product: result.data}
         dispatch(action)

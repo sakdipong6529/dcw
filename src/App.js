@@ -8,14 +8,14 @@ import Carousel from "./Components/Slide";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 //import DemoCarousel from './Components/Slidebar'
 import LoginForm from './Components/LoginForm'
-import ProductCard from './CRUD-FORM/ProductCard'
+
 
 
 function App() {
   const dispatch = useDispatch();
   
   const getProducts = async () => {
-    const result = await axios.get(`http://localhost/api/products`)
+    const result = await axios.get(`https://bof-dcw.herokuapp.com/api/products`)
     const action = {type:'GET_PRODUCTS',products: result.data}
     dispatch(action)
   }

@@ -9,7 +9,7 @@ const ProductCard = (props)=>{
     const dispatch = useDispatch();
     const form = useSelector(state => state.form)
     const getProducts = async () => {
-        const result = await axios.get(`http://localhost/api/products`)
+        const result = await axios.get(`https://bof-dcw.herokuapp.com/api/products`)
        
         const action = {type:'GET_PRODUCTS',product: result.data}
         dispatch(action)
@@ -19,13 +19,13 @@ const ProductCard = (props)=>{
       }, [])
 
     const deleteProduct = async ()=>{
-        await axios.delete(`http://localhost/api/products/${props.no}`)
+        await axios.delete(`https://bof-dcw.herokuapp.com/api/products/${props.no}`)
         dispatch({type:'DELETE_PRODUCT',no: props.no })
         getProducts()
           
     }
     const updateProduct = async () => {
-        await axios.put(`http://localhost/api/products/${props.no}`,form)
+        await axios.put(`https://bof-dcw.herokuapp.com/api/products/${props.no}`,form)
          dispatch(
              {type:'UPDATE_PRODUCT',
              no: props.no,
