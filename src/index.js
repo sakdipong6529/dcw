@@ -9,12 +9,10 @@ import config from './config'
 import firebase from 'firebase/app';
 import 'firebase/firestore'
 
- 
- if (firebase.apps.length === 0)
+if (firebase.apps.length === 0)
         firebase.initializeApp(config);
 
- export const firestore = firebase.firestore()
-
+export const firestore = firebase.firestore()
 
 ReactDOM.render(    
     <Provider store ={store}> 

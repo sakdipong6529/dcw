@@ -2,6 +2,7 @@ import React, { useEffect }  from 'react';
 import ProductCard from './ProductCard'
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios'
+import './ProductList.css'
 
 
 const ProductList = ()=>{
@@ -21,7 +22,7 @@ const ProductList = ()=>{
         return (<h2>No data</h2>)
 
     return(
-        <div >
+        <div className='scr'>
             {
                 products.map((product, index) => (
                     <td key={index} >
